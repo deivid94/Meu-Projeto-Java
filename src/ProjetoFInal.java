@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -6,6 +7,18 @@ public class ProjetoFInal {
         Scanner sc = new Scanner(System.in);
         System.out.print("Digite um numero interio: ");
         int valorDigitado = sc.nextInt();
-        System.out.println("o numero digitado foi: " + valorDigitado);
+
+
+        Random  random = new Random();
+        int numeroAleatorioCriado = random.nextInt(100);
+      
+        if (valorDigitado == numeroAleatorioCriado){
+            System.out.println("Parabens!! voce acertou o numero: " +numeroAleatorioCriado);
+        }else {
+            System.out.println("infelizmente voce errou o numero criado era: " +numeroAleatorioCriado);
+        }
+
+
+
     }
 }
